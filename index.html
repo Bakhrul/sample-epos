@@ -1012,13 +1012,11 @@
 
         // send print data
         function sendMessage() {
-            var temp = printer.message;
+            printer.messag = '';
+            printer.force = true;
+            printer.addText('coba lagi');
+            printer.send()
 
-            // send
-            printer.force = document.getElementById('force_print').checked;
-            printer.send();
-
-            printer.message = temp;
         }
 
         // start status monitor
@@ -1145,6 +1143,7 @@
             </tbody>
         </table>
     </form>
+    <button type="button" onclick="sendMessage()">Coba Print Lagi</button>
     <br />  
 </body>
 
