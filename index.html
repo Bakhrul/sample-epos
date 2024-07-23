@@ -187,14 +187,14 @@
 
         function callbackCreateDevice_printer(data, code) {
             if (data == null) {
-                consolelog(code);
+                consolelog(code);                
                 return;
             }
 
             consolelog("you can use printer.");
 
             printer = data;
-
+            printer.timeout = 60000;
             // Set a response receipt callback function
             printer.onreceive = function (res) {
                 // Show message
