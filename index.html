@@ -158,7 +158,8 @@
         function connectIpAddress() {
             ipAddress = document.getElementById("target").value;
             port = document.getElementById("port").value;
-
+            console.log(ipAddress);
+            console.log(port);
             ePosDev.connect(ipAddress, port, Callback_connect);
             ePosDev.onreconnecting = OnReconnecting;
             ePosDev.onreconnect = OnReconnect;
